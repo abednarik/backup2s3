@@ -2,7 +2,7 @@
 
 Script to backup a local directory to an S3 bucket.
 
-*DISCLAIMER* This script was only tested in Ubuntu 18.04 with Python 3.6 and is not intended to be used in production.
+__DISCLAIMER__ This script was only tested in Ubuntu 18.04 with Python 3.6 and is not intended to be used in production.
 Notifications emails are only sent to localhost.
 
 ## Requirements
@@ -66,12 +66,11 @@ email = localhost
 | email         | Email address to send notifications after each run |
 
 
-
 ## Usage
 
-You can schedule a cronjob to execute daily backups backups
+Schedule a cron job to execute daily backups
 
-### Example
+#### Example
 
 - Edit crontab using 
 
@@ -85,6 +84,7 @@ sudo crontab -e
 0 0 * * *    /usr/local/bin/backup2s3.py  > /dev/null 2>&1
 ```
 
-*NOTE* Make user user running this cron is able to wirte to */var/log/backup2s3.log*
+
+__NOTE__ Make user user running this cron job is able to wirte to __/var/log/backup2s3.log__
 
 
