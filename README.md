@@ -19,7 +19,7 @@ $ wget https://raw.githubusercontent.com/abednarik/backup2s3/master/backup2s3.py
 $ chmod +x /usr/local/bin/backup2s3.py
 ```
 
-* Install python modules with pip:
+* Install python modules with pip
 
 ```shell
 $ pip3 install boto3
@@ -42,20 +42,20 @@ Default region name [None]: your-region
 
 ## Configuration
 
-- Create a configuration file in a convenient directory. For example
+- Create a directory to store configurations files for this process. For example:
 
 ```shell
 $ sudo mkdir /etc/backup2s3
 ```
 
-- Create a configuration file with a descriptive name and place in the directory created above. in this case `apache2.cfg`
+- Create a configuration file with a descriptive name and place in the directory created above. For example `apache2.cfg`
 
 ```
 [backup2s3]
 local_path = /etc/apache2
 bucket = abednarik-backups
 retention = 7
-email = localhost
+email = abednarik
 ```
 
 | Option        | Description                                        | 
